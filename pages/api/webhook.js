@@ -26,7 +26,7 @@ export default function handler(req, res) {
     }
   }
   else {
-      res.status(404)
+      res.status(200)
       res.send()
   }
 }
