@@ -25,8 +25,11 @@ export default function handler(req, res) {
       res.send()
     }
   }
-  else {
+  else if (body.object === 'page') {
       res.status(200)
+      res.send('EVENT_RECEIVED')
+  } else {
+      res.status(404)
       res.send()
   }
 }
