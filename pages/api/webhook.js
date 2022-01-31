@@ -7,9 +7,7 @@ export default function handler(req, res) {
   let mode = req.query['hub.mode'];
   let token = req.query['hub.verify_token'];
   let challenge = req.query['hub.challenge'];
-  console.log(req)
-  console.log(req.query)
-  console.log(req.body)
+  console.log(JSON.stringify(req.body, null, 2))
     
   // Checks if a token and mode is in the query string of the request
   if (mode && token) {
